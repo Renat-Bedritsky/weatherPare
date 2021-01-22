@@ -1,0 +1,12 @@
+.field {
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: green;
+	color: white;
+	border: 0;
+	padding: 10px 20px;
+	cursor: pointer;
+	text-transform: uppercase;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+   <title>Формы</title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="formstyle.css">
+
+</head>
+<body>
+
+   <form method="POST">   <!--action="mail.php"-->   <!-- GET - Для задания параметров поиска -->
+   
+      <input type="hidden" name="iduser" value="87yas8d7y">
+      <input type="hidden" name="loginuser" value="user123">
+   
+      <fieldset>
+	  
+	     <legend>Общая информация</legend>
+	  
+         <div class="field">
+	  
+	        Ваше имя<br>
+		    <input minlength="2" maxlength="50" type="text" name="firstname" placeholder="Иван">
+	     </div>
+   
+        <div class="field">
+	        Телефон *<br>
+		    <input readonly required type="tel" name="phone" value="+375292766705">
+	     </div>
+   
+         <div class="field">
+	        Эл. почта<br>
+		    <input type="email" name="email" placeholder="Ival@gmail.com">
+	     </div>
+		 
+	  </fieldset>
+   
+      <div class="field">
+	     Ваш возраст<br>
+		 <input min="18" max="65" step="1" type="number" name="age" value="19">
+	  </div>
+   
+      <div class="field">
+	     Ваш пол<br>
+		 <input type="radio" name="gender"> - Мужской<br>
+		 <input type="radio" name="gender"> - Женский<br>
+		 <input type="radio" name="gender"> - Другой
+	  </div>
+   
+      <div class="field">
+	     Прикрепите фото<br>
+		 <input type="file" name="foto">
+	  </div>
+   
+      <div class="field">
+	     Дата рождения<br>
+		 <input type="date" name="birthday">
+	  </div>
+   
+      <div class="field">
+	     Оцените нашу работу<br>
+		 <input disabled min="1" max="5"type="range" name="range">
+	  </div>
+   
+      <div class="field">
+	     Выберите город<br>
+		 <select multiple name="city[]">
+		    <option disabled>Ваш город</option>
+		    <option>Минск</option>
+		    <option selected>Гродно</option>
+		    <option>Брест</option>
+		 </select>
+	  </div>
+   
+      <div class="field">
+	     Ваше сообщение<br>
+		 <textarea name="massage" placeholder="Напишите что-нибудь"></textarea>
+	  </div>
+   
+      <div class="field">
+		 <input required type="checkbox" name="confirm"> - Я согласен с ...
+	  </div>
+	  
+	  <div class="field">
+	     Что вы ищете?<br>
+		 <input type="search" list="searchlist" name="search">
+		 <datalist id="searchlist">
+		    <option>Резюме</option>
+		    <option>Работа</option>
+		    <option>Вакансии</option>
+		 </datalist>
+	  </div>
+	  
+	  <!--<input type="submit" value="Отправить 2">-->
+	  <button class="send">Отправить</button>
+	  <button type="reset" class="send">Очистить</button>
+   
+   </form>
+
+</body>
+</html>
